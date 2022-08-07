@@ -1,2 +1,1 @@
-# springboot_template
-Springboot Init
+Springboot Starter
