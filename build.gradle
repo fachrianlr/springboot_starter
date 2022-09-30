@@ -20,7 +20,8 @@ dependencies {
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.4.0'
     implementation 'org.json:json:20201115'
     implementation 'com.konghq:unirest-java:3.11.05'
-
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
@@ -31,4 +32,4 @@ test {
     useJUnitPlatform()
 }
 
-apply from: 'build_bjtg.gradle'
+apply from: 'custom.gradle'

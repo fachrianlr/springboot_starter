@@ -36,8 +36,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         String basicAuthUser = env.getProperty("security.basicauth.user");
         String basicAuthPasswd = env.getProperty("security.basicauth.passwd");
 
-        System.out.println(basicAuthUser);
-        System.out.println(basicAuthPasswd);
         auth.inMemoryAuthentication()
                 .withUser(basicAuthUser)
                 .password("{noop}" + basicAuthPasswd)
